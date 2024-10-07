@@ -53,6 +53,8 @@ module.exports = function (app) {
         values.push({ path: 'environment.outside.relativeHumidity', value: parseFloat(packet.obs[0][8])});
         values.push({ path: 'environment.outside.illuminance', value: parseFloat(packet.obs[0][9])});
         values.push({ path: 'environment.outside.solar', value: parseFloat(packet.obs[0][11])});
+        values.push({ path: 'environment.outside.lightning.distance', value: parseFloat(packet.obs[0][14])});
+        values.push({ path: 'environment.outside.lightning.strikes', value: parseFloat(packet.obs[0][15])});
 
         values.push({ path: 'environment.outside.wind.lull', value: parseFloat(packet.obs[0][1])});
         values.push({ path: 'environment.outside.wind.avg', value: parseFloat(packet.obs[0][2])});
@@ -105,11 +107,13 @@ module.exports = function (app) {
         type: 'string',
         title: 'SignalK key for pressure (Pa)',
         default: 'environment.outside.pressure'
+        units: "Pa"
       },
       illuminance: {
         type: 'string',
         title: 'SignalK key for illuminance (Lux)',
         default: 'environment.outside.illuminance'
+        units: "lux"
       },
       solar: {
         type: 'string',
@@ -126,6 +130,17 @@ module.exports = function (app) {
         type: 'string',
         title: 'SignalK key for wind direction (apparent)',
         default: 'environment.wind.angleApparent',
+      },
+      lightning_strikes: {
+        type: 'string',
+        title: 'SignalK key for number of lightning strikes',
+        default: 'environment.lightning.strikes',
+      },
+      lightning_distance: {
+        type: 'string',
+        title: 'SignalK key Avg distance of lightning strikes (km)',
+        default: 'environment.lightning.distance',
+        units: "km"
       },
     }
   };
