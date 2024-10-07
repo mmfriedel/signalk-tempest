@@ -106,13 +106,13 @@ module.exports = function (app) {
       pressure: {
         type: 'string',
         title: 'SignalK key for pressure (Pa)',
-        default: 'environment.outside.pressure'
+        default: 'environment.outside.pressure',
         units: "Pa"
       },
       illuminance: {
         type: 'string',
         title: 'SignalK key for illuminance (Lux)',
-        default: 'environment.outside.illuminance'
+        default: 'environment.outside.illuminance',
         units: "lux"
       },
       solar: {
