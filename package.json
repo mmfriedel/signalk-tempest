@@ -1,0 +1,14 @@
+{
+  "name": "signalk-tempest",
+  "version": "1.0.0",
+  "description": "Weather Data from Tempest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Friedel",
+  "license": "Apache 2.0",
+  "keywords": [
+    "signalk-category-weather"
+  ]
+}
